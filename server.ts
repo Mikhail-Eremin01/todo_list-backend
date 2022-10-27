@@ -6,7 +6,7 @@ require("dotenv").config();
 import router from "./router/index";
 const PORT = process.env.PORT || '3001';
 const app = express();
-// import errorMiddleware from "./middlewares/error-middleware";
+import errorMiddleware from "./middlewares/error-middleware";
 
 app.use(express.json());
 app.use(cookieParser());
@@ -17,7 +17,7 @@ app.use(
     })
 );
 app.use("/api", router);
-// app.use(errorMiddleware);
+app.use(errorMiddleware);
 const start = async () => {
     try {
         await mongoose

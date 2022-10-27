@@ -1,7 +1,4 @@
-class TaskController {
-    async getAllTasks() {
 
-    }
+export const getAllTasks = async() => {
+
 }
-
-export default new TaskController;
