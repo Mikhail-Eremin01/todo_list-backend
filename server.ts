@@ -4,7 +4,7 @@ import cookieParser from "cookie-parser";
 import mongoose from "mongoose";
 require("dotenv").config();
 import router from "./router/index";
-const PORT = process.env.PORT || '3001';
+const PORT = process.env.PORT || '3002';
 const app = express();
 import errorMiddleware from "./middlewares/error-middleware";
 
@@ -18,6 +18,7 @@ app.use(
 );
 app.use("/api", router);
 app.use(errorMiddleware);
+
 const start = async () => {
     try {
         await mongoose

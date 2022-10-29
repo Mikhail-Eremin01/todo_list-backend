@@ -36,7 +36,8 @@ class UserService {
 
         const usersData = {
             id: user._id,
-            email: user.email
+            email: user.email,
+            name: user.name
         }
         const tokens = tokenService.generateTokens({ ...usersData });
         await tokenService.saveToken(usersData.id, tokens.refreshToken);
@@ -55,7 +56,8 @@ class UserService {
         }
         const usersData = {
             id: user._id,
-            email: user.email
+            email: user.email,
+            name: user.name
         }
         const tokens = tokenService.generateTokens({ ...usersData });
 
@@ -83,7 +85,8 @@ class UserService {
         if(user) {
             const usersData = {
                 id: user._id,
-                email: user.email
+                email: user.email,
+                name: user.name
             }
             const tokens = tokenService.generateTokens({ ...usersData });
 
