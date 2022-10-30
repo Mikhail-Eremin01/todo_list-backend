@@ -1,0 +1,14 @@
+org: mykhailo11yeromin
+app: aws-node-express-dynamodb-api-project
+service: todolist
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+functions:
+  api:
+    handler: handler.handler
+    events:
+      - httpApi: '*'

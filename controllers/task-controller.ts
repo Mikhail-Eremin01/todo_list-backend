@@ -31,7 +31,7 @@ export const updateTask = async(req: Request, res: Response, next:NextFunction) 
 }
 
 export const deleteTask = async(req: Request, res: Response, next:NextFunction) => {
-    const {id} = req.body;
+    const {id} = req.params;
     await TaskModel.deleteOne({_id: id});
     const allTasks = await TaskModel.find({});
 

@@ -17,7 +17,7 @@ router.get("/refresh", refresh);
 router.get('/tasks', readAllTasks);
 router.post('/tasks', createTask);
 router.put('/tasks', updateTask);
-router.delete('/tasks', deleteTask);
+router.delete('/tasks/:id', deleteTask);
 router.put('/tasksCondition', changeTasksCondition)
 
 export default router;
