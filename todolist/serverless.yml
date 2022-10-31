@@ -1,6 +1,6 @@
 org: mykhailo11yeromin
 app: aws-node-express-dynamodb-api-project
-service: todolist
+service: todoList
 frameworkVersion: '3'
 
 provider:
