@@ -67,7 +67,7 @@ export const loginService = async(email:string, password:string) => {
     }
     const tokens = await generateTokensService({ ...usersData });
 
-    await saveTokenService(usersData.id, (await tokens).refreshToken);
+    await saveTokenService(usersData.id, tokens.refreshToken);
 
     return { ...tokens, user: usersData };
 }
